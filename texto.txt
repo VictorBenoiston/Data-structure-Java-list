@@ -1,0 +1,1 @@
+Esse e um exemplo de arquivo txt codificado pelo algoritmo de codificao em Java que foi desenvolvido.

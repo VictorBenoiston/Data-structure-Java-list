@@ -15,17 +15,6 @@ public class Question_32 {
 
             Pessoa[] pessoas = new Pessoa[qtPessoas];
 
-        try {
-            FileWriter writer = new FileWriter("outputQ32.csv");
-            writer.write("Pessoas cadastradas: \n");
-            for (String palavra : palavras.keySet()) {
-                writer.write(palavra + ": " + palavras.get(palavra) + "\n");
-            }
-            writer.close();
-        } catch (IOException e) {
-            System.out.println("Erro ao salvar o resultado em outputQ35.csv: " + e.getMessage());
-        }
-
         for (int i = 0; i < qtPessoas; i++) {
             System.out.println("Pessoa " + (i + 1));
             System.out.print("CPF: ");
@@ -44,8 +33,22 @@ public class Question_32 {
             pessoas[i] = new Pessoa(cpf, nome, idade, sexo, peso, altura);
         }
 
-        System.out.println("Resultado salvo em outputQ35.csv.");
-
+        try {
+            FileWriter writer = new FileWriter("outputQ32.csv");
+            writer.write("Pessoas cadastradas: \n");
+            for (Pessoa pessoa : pessoas) {
+                writer.write("\n" + "-----------------------" + "\n");
+                writer.write("CPF: " + pessoa.getCpf() + "\n");
+                writer.write("Nome: " + pessoa.getNome() + "\n");
+                writer.write("Idade: " + pessoa.getIdade() + "\n");
+                writer.write("Sexo: " + pessoa.getSexo() + "\n");
+                writer.write("Peso: " + pessoa.getPeso() + "\n");
+                writer.write("Altura: " + pessoa.getAltura());
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Erro ao salvar o resultado em outputQ32.csv: " + e.getMessage());
+        }
 
         System.out.println("Pessoas cadastradas: ");
             for (int c = 0; c < qtPessoas; c++){
@@ -58,5 +61,7 @@ public class Question_32 {
                         "Altura: " + pessoas[c].getAltura() + "\n" +
                         "IMC: " + pessoas[c].getImc() + "\n");
             }
+
+        System.out.println("Resultado salvo em outputQ32.csv.");
         }
     }

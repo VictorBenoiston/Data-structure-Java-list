@@ -1,0 +1,28 @@
+Diferença entre as Lists:
+(Todos implementam a interface de List)
+-ArrayList: Além do tamanho dinâmico, os elementos são armazenados em um Array.
+-Vector: A diferença é por ser sincronizado.
+-LinkedList: Se trata de uma lista duplamente encadeada.
+
+Diferença entre Sets:
+(Todos implementam a interface de Set)
+-HashSet: Implementação não ordenada.
+-LinkedHashSet: Inserção de elementos ordenada.
+-TreeSet: Tanto a implementaçnao quanto a inserção, são ordenadas.
+
+Diferença entre Queues:
+(Todos implementam a interface Queue)
+-PriorityQueue: Fila de prioridade, o com maior prioridade sai primeiro (baseado em heap).
+-LinkedList: É um coringa. Pode usar interface de List e Queue.
+
+Deque:
+(Utiliza a interface Deque, Queue e List)
+-LinkedList: O maior coringa de todos, trata-se de uma lista duplamente encadeada, podendo ser usada tanto
+como pilha, quanto fila.
+
+Map:
+(Utiliza a interface Map)
+-HashMap: um mapa com implementação desordenada com chaves únicas, em outras linguagens, chamamos
+ de dictionary {key: "value"}.
+-LinkedHashMap: Se assemelha ao HashMap, mas ocm inserção de elementos ordenada.
+-TreeMap: As chaves são organizadas crescentemente (automaticamente), tanto na criação, quanto na inserção.
